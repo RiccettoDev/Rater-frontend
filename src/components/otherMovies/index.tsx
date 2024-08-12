@@ -1,5 +1,5 @@
 import { FaPlay, FaStar } from "react-icons/fa";
-import { CardContent, CardImage, CardInfo, CardMovie, CardOverlay, CardTitle, CardTrailer } from "./other-movies";
+import { CardContent, CardImage, CardInfo, CardMovie, CardOverlay, CardTitle, CardTrailer } from "./other-movies-styles";
 
 interface Movie {
   id: number;
