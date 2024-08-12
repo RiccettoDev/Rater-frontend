@@ -2,6 +2,7 @@ import { Container } from './home-styles'
 import { Header } from '../../components/header';
 import { MovieSection } from '../../components/movieSection'
 import { News } from '../../components/news';
+import { MoviesWatched } from '../../components/moviesWatched';
 
 export function Home() {
   return (
@@ -9,6 +10,7 @@ export function Home() {
       <Header />
       <MovieSection />
       <News />
+      <MoviesWatched />
     </Container>
   );
 }
