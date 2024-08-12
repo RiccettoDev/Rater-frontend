@@ -4,9 +4,9 @@ export const HeaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 1440px;
-  height: 96px;
+  width: 100%;
   padding: 24px;
+  height: 96px;
   color: #FFFFFF;
 `;
 
@@ -20,7 +20,6 @@ export const SectionContainer = styled.div`
   position: relative;
   display: flex;
   align-items: center;
-  width: 337px;
   height: 48px;
   border-radius: 50px;
   background-color: #191919;
@@ -42,8 +41,6 @@ export const Search = styled.input`
 `;
 
 export const SearchButton = styled.button`
-  left: 16px;
-  width: 40px;
   height: 40px;
   border-radius: 99px;
   border: none;
@@ -61,6 +58,7 @@ export const LoginButton = styled.button`
   width: 128px;
   height: 40px;
   border-radius: 12px;
+  margin-right: 48px;
   border: none;
   display: flex;
   align-items: center;
