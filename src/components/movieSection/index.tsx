@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import { MovieEmphasis } from "../EmphasisMovie";
+import { MovieEmphasis } from "../emphasisMovie";
 import { OtherMovies } from "../otherMovies";
 
-import { Container, ContainerOthers } from "./movie-section-styles";
+import { Container, ContainerOthers, TitleContainer } from "./movie-section-styles";
 
 const apiKey = import.meta.env.VITE_API_KEY;
 const apiMovie = import.meta.env.VITE_API_MOVIE;
@@ -45,6 +45,9 @@ export function MovieSection() {
         <MovieEmphasis key={movie.id} movie={movie} imageBaseUrl={imageBaseUrl} />
       ))}
       <ContainerOthers>
+        <TitleContainer>
+          <h3>| Outros Destaques</h3>
+        </TitleContainer>
         {topMovies.slice(1, 4).map(movie => (
           <OtherMovies key={movie.id} movie={movie} imageBaseUrl={imageBaseUrl} />
         ))}

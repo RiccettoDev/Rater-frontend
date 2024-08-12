@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const CardMovie = styled.div`
   position: relative;
   width: 100%;
-  height: 90%;
+  height: 100%;
   gap: 24px;
   color: #FFFFFF;
   overflow: hidden; /* Garante que o conteúdo não ultrapasse o card */
@@ -33,12 +33,10 @@ export const CardContent = styled.div`
   left: 5%;
   width: 70%;
   color: #FFFFFF;
-  padding: 10px;
-  box-sizing: border-box;
   z-index: 1; /* Garante que o conteúdo fique sobre o overlay */
 `;
 
-export const CardTitle = styled.h1`
+export const CardTitle = styled.h3`
   margin: 0;
   padding-bottom: 20px;
 `;
@@ -47,7 +45,6 @@ export const CardInfo = styled.p`
   display: flex;
   align-items: center;
   gap: 12px;
-  margin: 0;
   padding-bottom: 20px;
 `;
 
