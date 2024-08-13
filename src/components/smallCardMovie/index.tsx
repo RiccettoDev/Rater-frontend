@@ -1,5 +1,5 @@
-import { FaPlay, FaStar } from "react-icons/fa";
-import { CardContent, CardImage, CardInfo, CardMovie, CardOverlay, CardOverview, CardSubInfo, CardTitle, CardTrailer } from "./emphasis-movie-styles";
+import { FaStar } from "react-icons/fa";
+import { CardContent, CardImage, CardInfo, CardMovie, CardOverlay, CardTitle } from "./small-card-movie-styles";
 import { Link } from "react-router-dom";
 
 interface Movie {
@@ -21,7 +21,7 @@ interface MovieEmphasisProps {
   imageBaseUrl: string;
 }
 
-export function MovieEmphasis({ movie, imageBaseUrl }: MovieEmphasisProps) {
+export function SmallCardMovie({ movie, imageBaseUrl }: MovieEmphasisProps) {
   return (
     <CardMovie key={movie.id}>
       {movie.poster_path && (
@@ -37,12 +37,7 @@ export function MovieEmphasis({ movie, imageBaseUrl }: MovieEmphasisProps) {
               <CardInfo>
                 <FaStar size={20} color="#FFFF00" />
                 {truncateToOneDecimal(Number(movie.vote_average))}
-                <CardSubInfo>
-                  | {movie.popularity} popularity | {movie.release_date}
-                </CardSubInfo>
               </CardInfo>
-              <CardOverview>{movie.overview}</CardOverview>
-              <CardTrailer>Assistir ao trailer <FaPlay size={15} /></CardTrailer>
             </CardContent>
           </Link>
         </>

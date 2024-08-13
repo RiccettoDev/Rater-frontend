@@ -10,6 +10,13 @@ const GlobalStyles = createGlobalStyle`
     font-family: 'Inter', sans-serif;
     background-color: #121212;
   }
+
+  a {
+    text-decoration: none; /* Remove sublinhado */
+    outline: none; /* Remove contorno */
+    border: none; /* Remove borda */
+  }
 `;
+
 
 export default GlobalStyles;

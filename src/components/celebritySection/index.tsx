@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Container, ContainerOthers, Works, TitleContainer, ProfileImage, TitleContainer2, TitleContainer3, Button } from "./celebrity-section-styles";
 import { CardsWorks } from "../cardWorks";
 
@@ -82,14 +82,16 @@ export function CelebritySection() {
     <Container>
       <Works>
         {displayedWorks.map(work => (
-          <CardsWorks
-            key={work.id}
-            title={work.title}
-            posterPath={work.poster_path}
-            voteAverage={work.vote_average}
-            releaseDate={work.release_date}
-            imageBaseUrl={imageBaseUrl}
-          />
+          <Link to={`/movie/${work.id}`}>
+            <CardsWorks
+              key={work.id}
+              title={work.title}
+              posterPath={work.poster_path}
+              voteAverage={work.vote_average}
+              releaseDate={work.release_date}
+              imageBaseUrl={imageBaseUrl}
+            />
+          </Link>
         ))}
         {displayedWorks.length < works.length && (
           <Button onClick={handleLoadMore}>Ver mais</Button>

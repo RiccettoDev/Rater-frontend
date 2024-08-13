@@ -9,6 +9,7 @@ interface CardsWorksProps {
   imageBaseUrl: string;
 }
 
+
 export function CardsWorks({ title, posterPath, voteAverage, releaseDate, imageBaseUrl }: CardsWorksProps) {
   return (
     <Container>
