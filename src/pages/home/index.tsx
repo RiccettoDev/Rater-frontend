@@ -4,6 +4,7 @@ import { MovieSection } from '../../components/movieSection'
 import { News } from '../../components/news';
 import { MoviesWatched } from '../../components/moviesWatched';
 import { Recommended } from '../../components/recommended';
+import { Celebrities } from '../../components/celebrities';
 
 export function Home() {
   return (
@@ -13,6 +14,7 @@ export function Home() {
       <News />
       <MoviesWatched />
       <Recommended />
+      <Celebrities />
     </Container>
   );
 }
