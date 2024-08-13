@@ -7,11 +7,14 @@ import {
   SearchButton, Search,
   LoginButton
 } from './header-styles'
+import { Link } from 'react-router-dom';
 
 export function Header() {
   return (
     <HeaderContainer>
-      <img src={logo} alt="logo" />
+      <Link to={`/`}>
+        <img src={logo} alt="logo" />
+      </Link>
       <SearchContainer>
         <SectionContainer>
           <SearchButton>

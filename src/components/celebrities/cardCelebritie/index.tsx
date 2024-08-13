@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { CardContent, CardImage, CardMovie, CardOverlay, CardTitle } from "./card-celebritie.styles";
 
 interface Celebrity {
@@ -17,14 +18,16 @@ export function CardCelebrities({ celebrity, imageBaseUrl }: CardCelebritiesProp
     <CardMovie key={celebrity.id}>
       {celebrity.profile_path && (
         <>
-          <CardImage
-            src={`${imageBaseUrl}${celebrity.profile_path}`}
-            alt={celebrity.name}
-          />
-          <CardOverlay />
-          <CardContent>
-            <CardTitle>{celebrity.name}</CardTitle>
-          </CardContent>
+          <Link to={`/celebrity/${celebrity.id}`}>
+            <CardImage
+              src={`${imageBaseUrl}${celebrity.profile_path}`}
+              alt={celebrity.name}
+            />
+            <CardOverlay />
+            <CardContent>
+              <CardTitle>{celebrity.name}</CardTitle>
+            </CardContent>
+          </Link>
         </>
       )}
     </CardMovie>
