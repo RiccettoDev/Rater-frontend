@@ -6,6 +6,7 @@ import {
   CardImage,
   CardOverlay,
   CardTrailer,
+  Vote,
   Info,
   Detail,
   TitleContainer,
@@ -20,10 +21,17 @@ import {
   ContainerCelebrity,
   SubContainerCelebrity,
   ContainerRecommended,
-  SubContainer
+  SubContainer,
+  ModalContainer,
+  ModalContent,
+  Button,
+  TitleModal,
+  Message,
+  CloseButton,
+  ContainerStars
 } from "./movie-detail-styles";
 import { Header } from "../../components/header";
-import { FaPlay, FaStar } from "react-icons/fa";
+import { FaPlay, FaRegStar, FaStar } from "react-icons/fa";
 import { ActorEmphasis } from "../../components/actorEmphasis";
 import { SmallCardMovie } from "../../components/smallCardMovie";
 
@@ -71,6 +79,28 @@ export function MovieDetail() {
   const { id } = useParams<{ id: string }>();
   const [movie, setMovie] = useState<Movie | null>(null);
   const [recommendedMovies, setRecommendedMovies] = useState<RecommendedMovie[]>([]);
+
+  const [isLoggedIn, setIsLoggedIn] = useState(false); // Estado de login
+  const [isModalOpen, setIsModalOpen] = useState(false); // Estado do modal
+  const [modalMessage, setModalMessage] = useState(""); // Mensagem do modal
+  const [rating, setRating] = useState<number>(0);
+
+  const handleStarClick = (index: number) => {
+    setRating(index + 1); // Adiciona 1 porque o índice começa em 0
+  };
+
+  const handleRatingClick = () => {
+    if (isLoggedIn) {
+      setModalMessage("Sua avaliação");
+    } else {
+      setModalMessage("Faça o login para avaliar o filme.");
+    }
+    setIsModalOpen(true); // Abre o modal
+  };
+
+  const closeModal = () => {
+    setIsModalOpen(false); // Fecha o modal
+  };
 
   const getMovieDetails = async (url: string) => {
     try {
@@ -146,6 +176,7 @@ export function MovieDetail() {
         />
         <CardOverlay />
         <CardTrailer>Assistir ao trailer <FaPlay size={15} /></CardTrailer>
+        <Vote onClick={handleRatingClick}>Avaliar <FaStar size={15} /></Vote>
       </Profile>
       <Info>
         <Detail>
@@ -193,6 +224,39 @@ export function MovieDetail() {
           ))}
         </SubContainer>
       </ContainerRecommended>
+      {isModalOpen && (
+        <ModalContainer>
+          <ModalContent>
+            <Message>{modalMessage}</Message>
+            <TitleModal>{movie.title}</TitleModal>
+            <ContainerStars>
+              {Array.from({ length: 10 }).map((_, index) => (
+                index < rating ? (
+                  <FaStar
+                    key={index}
+                    size={30}
+                    onClick={() => handleStarClick(index)}
+                    color="#FFFF00"
+                    style={{ cursor: "pointer" }}
+                  />
+                ) : (
+                  <FaRegStar
+                    key={index}
+                    size={30}
+                    onClick={() => handleStarClick(index)}
+                    color="#858585"
+                    style={{ cursor: "pointer" }}
+                  />
+                )
+              ))}
+            </ContainerStars>
+            {isLoggedIn && (
+              <Button onClick={closeModal}>Avaliar</Button>
+            )}
+            <CloseButton onClick={closeModal}>X</CloseButton>
+          </ModalContent>
+        </ModalContainer>
+      )}
     </Container>
   );
 }

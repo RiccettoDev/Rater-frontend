@@ -59,6 +59,28 @@ export const CardTrailer = styled.button`
     cursor: pointer;
   }
 `
+
+export const Vote = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: #FFFFFF;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.5); /* Fundo escuro para melhorar a legibilidade */
+  position: absolute;
+  bottom: 2em;
+  right: 2em;
+  
+  &:hover {
+    background: rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+`
 export const Info = styled.div`
   display: flex;
   width: 96%;
@@ -184,4 +206,101 @@ export const SubContainer = styled.div`
   height: 250px;
   color: #FFFFFF;
   gap: 15px;
+`;
+
+//------------ Modal
+
+export const ModalContainer = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+`;
+
+export const ModalContent = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: #121212;
+  width: 550px;
+  height: 240px;
+  padding: 2em;
+  border-radius: 10px;
+  text-align: center;
+  gap: 1em;
+  color: #FFFFFF;
+  position: relative;
+`;
+
+export const ContainerStars = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 2em;
+  margin-top: 1em;
+  color: #858585;
+  gap: 10px;
+`;
+
+export const Button = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: #FFFFFF;
+  width: 200px;
+  padding: 1em;
+  border-radius: 10px;
+  background-color: #232323;
+  
+  &:hover {
+    background: rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+`
+
+export const CloseButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: #FFFFFF;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #232323;
+  position: absolute;
+  top: 1em;
+  right: 1.5em;
+  
+  &:hover {
+    background: rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+`
+
+export const TitleModal = styled.div`
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  font-weight: bold;
+  color: #FFFFFF;
+`;
+
+export const Message = styled.p`
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  color: #FFFF00;
+  margin-bottom: 1em;
 `;
