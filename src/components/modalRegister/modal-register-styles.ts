@@ -1,83 +1,5 @@
 import styled from 'styled-components';
 
-export const HeaderContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%;
-  padding: 24px;
-  height: 96px;
-  color: #FFFFFF;
-`;
-
-export const SearchContainer = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 12px;
-`
-
-export const SectionContainer = styled.div`
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 48px;
-  border-radius: 50px;
-  background-color: #191919;
-`;
-
-export const Search = styled.input`
-  width: 100%;
-  height: 100%;
-  padding: 0 20px 0 50px;
-  border: none;
-  border-radius: 50px;
-  background-color: transparent;
-  color: #FFFFFF;
-  font-size: 16px;
-
-  ::placeholder {
-    color: #313131;
-  }
-`;
-
-export const SearchButton = styled.button`
-  height: 40px;
-  border-radius: 99px;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px;
-  background-color: #232323;
-  color: #EEEEEE;
-  cursor: pointer;
-`;
-
-export const LoginButton = styled.button`
-  left: 16px;
-  width: 128px;
-  height: 40px;
-  border-radius: 12px;
-  margin-right: 48px;
-  border: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 55px, 12px, 55px, 12px;
-  gap: 8px;
-  background-color: #232323;
-  color: #EEEEEE;
-  cursor: pointer;
-
-  &:hover {
-    background: rgba(0, 0, 0, 0.3);
-    transform: scale(1.05);
-    cursor: pointer;
-  }
-`;
-
-//------------ Modal
-
 export const ModalContainer = styled.div`
   position: fixed;
   top: 0;
@@ -98,8 +20,8 @@ export const ModalContent = styled.div`
   flex-direction: column;
   background: #121212;
   width: 477px;
-  height: 545px;
-  padding: 2em;
+  height: 731px;
+  padding: 3em;
   border-radius: 10px;
   text-align: center;
   gap: 1em;
@@ -137,12 +59,14 @@ export const SubTitle = styled.h4`
   color: #858585;
   font-weight: lighter;
   margin: 0;
+  margin-bottom: 2em;
 `
-export const SubContainer = styled.div`
+
+export const FormContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  width: 90%;
-  height: 40%;
+  width: 100%;
+  margin-bottom: -1em;
+  margin-top: -1em;
 `
 
 export const Label = styled.label`
@@ -157,6 +81,7 @@ export const Input = styled.input`
   padding-left: 15px;
   border-radius: 20px;
   margin-bottom: 1em;
+  margin-left: 1em;
   background-color: #232323;
   border: none;
   color: #FFFFFF;
@@ -168,13 +93,13 @@ export const Input = styled.input`
   }
 `
 
-export const LoginButton2 = styled.button`
+export const ConfirmeButton = styled.button`
   left: 16px;
-  width: 90%;
+  width: 100%;
   height: 50px;
-  margin-left: 1.5em;
+  margin-left: 1em;
   border-radius: 12px;
-  margin-top: 6em;
+  margin-top: 4.5em;
   margin-bottom: 4em;
   border: none;
   display: flex;

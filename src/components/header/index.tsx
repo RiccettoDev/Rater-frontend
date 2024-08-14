@@ -20,17 +20,27 @@ import {
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import { FaRegEyeSlash, FaRegEye } from 'react-icons/fa';
+import { ModalRegister } from '../modalRegister';
 
 export function Header() {
-  const [isModalOpen, setIsModalOpen] = useState(false); // Estado do modal
+  const [isModalOpen, setIsModalOpen] = useState(false); // Estado do modal de login
   const [showPassword, setShowPassword] = useState(false); // Estado para mostrar/esconder senha
+  const [isModalRegisterOpen, setIsModalRegisterOpen] = useState(false); // Estado do formulario de registro
 
   const handleRatingClick = () => {
-    setIsModalOpen(true); // Abre o modal
+    setIsModalOpen(true); // Abre o modal de login
   };
 
   const closeModal = () => {
-    setIsModalOpen(false); // Fecha o modal
+    setIsModalOpen(false); // Fecha o modal de login
+  };
+
+  const handleRegisterOpen = () => {
+    setIsModalRegisterOpen(true); // Abre o modal de registro
+  };
+
+  const closeModalRegister = () => {
+    setIsModalRegisterOpen(false); // Fecha o modal de registro
   };
 
   return (
@@ -89,10 +99,15 @@ export function Header() {
             <LoginButton2>Fazer Login</LoginButton2>
             <SubTitle>
               Não tem uma conta ainda?{' '}
-              <span style={{ color: '#FFFFFF' }}>Criar conta</span>
+              <button onClick={handleRegisterOpen} style={{ border: 'none', background: 'none', cursor: 'pointer' }}>
+                <span style={{ color: '#FFFFFF' }}>Criar conta</span>
+              </button>
             </SubTitle>
           </ModalContent>
         </ModalContainer>
+      )}
+      {isModalRegisterOpen && (
+        <ModalRegister closeModalRegister={closeModalRegister} />
       )}
     </HeaderContainer>
   );
