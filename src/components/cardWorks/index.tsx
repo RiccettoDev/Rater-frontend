@@ -14,7 +14,33 @@ export function CardsWorks({ title, posterPath, voteAverage, releaseDate, imageB
   return (
     <Container>
       <Profile>
-        <img src={`${imageBaseUrl}${posterPath}`} alt={title} style={{ width: "100%", height: "100%", objectFit: "cover", borderRadius: "10px" }} />
+        {posterPath ? (
+          <img
+            src={`${imageBaseUrl}${posterPath}`}
+            alt={title}
+            style={{
+              width: "100%",
+              height: "100%",
+              objectFit: "cover",
+              borderRadius: "10px"
+            }}
+          />
+        ) : (
+          <div
+            style={{
+              width: "100%",
+              height: "100%",
+              borderRadius: "10px",
+              backgroundColor: "#FFFFFF",
+              color: "black",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+            }}
+          >
+            Não há imagem
+          </div>
+        )}
       </Profile>
       <Info>
         <TitleContainer>{title}</TitleContainer>

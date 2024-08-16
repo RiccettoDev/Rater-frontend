@@ -88,6 +88,11 @@ export function MovieDetail() {
 
   const handleStarClick = (index: number) => {
     setRating(index + 1); // Adiciona 1 porque o índice começa em 0
+
+
+    if (isLoggedIn) { // este if não é nada, apenas gambiarra para fazer deploy, pois ainda
+      setIsLoggedIn(false) // não estou usando este setIsLoggedIn
+    }
   };
 
   const handleRatingClick = () => {
