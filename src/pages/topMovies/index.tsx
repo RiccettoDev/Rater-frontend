@@ -29,7 +29,7 @@ export function TopMovies() {
           throw new Error("Network response was not ok");
         }
         const data = await res.json();
-        setTopMovies(data.results.slice(0, 20)); // Pegue os 20 primeiros filmes
+        setTopMovies(data.results.slice(0, 18)); // Pegue os 20 primeiros filmes
       } catch (error) {
         console.error("Error fetching movies:", error);
       }

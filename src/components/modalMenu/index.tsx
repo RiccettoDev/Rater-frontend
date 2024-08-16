@@ -21,7 +21,9 @@ export function ModalMenu({ isOpen, closeModalMenu }: MenuModalProps) {
         <Link to={'/topmovies'}>
           <Title>Filmes</Title>
         </Link>
-        <Title>Celebridades</Title>
+        <Link to={'/topcelebrity'}>
+          <Title>Celebridades</Title>
+        </Link>
       </SubContainer>
     </ModalContainer>
   );
