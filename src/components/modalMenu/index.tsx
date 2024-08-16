@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import {
   ModalContainer,
   CloseButton,
@@ -17,7 +18,9 @@ export function ModalMenu({ isOpen, closeModalMenu }: MenuModalProps) {
     <ModalContainer>
       <CloseButton onClick={closeModalMenu}>X</CloseButton>
       <SubContainer>
-        <Title>Filmes</Title>
+        <Link to={'/topmovies'}>
+          <Title>Filmes</Title>
+        </Link>
         <Title>Celebridades</Title>
       </SubContainer>
     </ModalContainer>
