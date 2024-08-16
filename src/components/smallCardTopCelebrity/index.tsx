@@ -1,36 +1,31 @@
-import { CardContent, CardImage, CardInfo, CardMovie, CardOverlay, CardTitle } from "./small-card-top-celebrity-styles";
+import { CardContent, CardImage, CardMovie, CardOverlay, CardTitle } from "./small-card-top-celebrity-styles";
 import { Link } from "react-router-dom";
 
-interface Movie {
+interface Celebrity {
   id: number;
-  title: string;
-  overview: string;
-  poster_path: string;
-  release_date: string;
-  vote_average: string;
+  name: string;
+  profile_path: string | null;
   popularity: string;
 }
 
-interface MovieEmphasisProps {
-  movie: Movie;
+interface CelebrityCardProps {
+  celebrity: Celebrity;
   imageBaseUrl: string;
 }
 
-export function SmallCardTopCelebrity({ movie, imageBaseUrl }: MovieEmphasisProps) {
+export function SmallCardTopCelebrity({ celebrity, imageBaseUrl }: CelebrityCardProps) {
   return (
-    <CardMovie key={movie.id}>
-      {movie.poster_path && (
+    <CardMovie key={celebrity.id}>
+      {celebrity.profile_path && (
         <>
-          <Link to={`/movie/${movie.id}`}>
+          <Link to={`/celebrity/${celebrity.id}`}>
             <CardImage
-              src={`${imageBaseUrl}${movie.poster_path}`}
-              alt={movie.title}
+              src={`${imageBaseUrl}${celebrity.profile_path}`}
+              alt={celebrity.name}
             />
             <CardOverlay />
             <CardContent>
-              <CardTitle>{movie.title}</CardTitle>
-              <CardInfo>
-              </CardInfo>
+              <CardTitle>{celebrity.name}</CardTitle>
             </CardContent>
           </Link>
         </>

@@ -3,11 +3,11 @@ import { Header } from "../../components/header";
 import { Container, MoviesContainer, Title } from "./top-celebrity-styles";
 import { SmallCardTopCelebrity } from "../../components/smallCardTopCelebrity";
 
-interface Person {
+interface Celebrity {
   id: number;
   name: string;
   profile_path: string | null;
-  popularity: number;
+  popularity: string;
 }
 
 const apiKey = import.meta.env.VITE_API_KEY;
@@ -15,18 +15,18 @@ const apiPerson = import.meta.env.VITE_API_PERSON;
 const imageBaseUrl = import.meta.env.VITE_IMAGE_BASE_URL;
 
 export function TopCelebrity() {
-  const [topCelebrities, setTopCelebrities] = useState<Person[]>([]);
+  const [celebrities, setCelebrities] = useState<Celebrity[]>([]);
 
   useEffect(() => {
-    const topCelebrityURL = `${apiPerson}popular?api_key=${apiKey}&language=pt-br`;
+    const topCelebritiesURL = `${apiPerson}popular?api_key=${apiKey}&language=pt-br`;
     const getTopCelebrities = async () => {
       try {
-        const res = await fetch(topCelebrityURL);
+        const res = await fetch(topCelebritiesURL);
         if (!res.ok) {
           throw new Error("Network response was not ok");
         }
         const data = await res.json();
-        setTopCelebrities(data.results.slice(0, 20)); // Pegue os 20 primeiros atores
+        setCelebrities(data.results.slice(0, 20)); // Pega as 20 primeiras celebridades
       } catch (error) {
         console.error("Error fetching celebrities:", error);
       }
@@ -37,20 +37,12 @@ export function TopCelebrity() {
   return (
     <Container>
       <Header />
-      <Title>| Top Atores |</Title>
+      <Title>| Top Celebridades |</Title>
       <MoviesContainer>
-        {topCelebrities.map(person => (
+        {celebrities.map(celebrity => (
           <SmallCardTopCelebrity
-            key={person.id}
-            movie={{
-              id: person.id,
-              title: person.name,
-              poster_path: person.profile_path || '',
-              vote_average: '',
-              overview: '',
-              release_date: '',
-              popularity: person.popularity.toString(),
-            }}
+            key={celebrity.id}
+            celebrity={celebrity}
             imageBaseUrl={imageBaseUrl}
           />
         ))}

@@ -18,6 +18,7 @@ export const Profile = styled.div`
   margin-right: 24px;
   margin-top: -1em;
   border-radius: 10px;
+  padding: 24px;
   position: relative;
 `;
 
