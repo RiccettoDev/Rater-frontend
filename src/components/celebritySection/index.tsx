@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Container, ContainerOthers, Works, TitleContainer, ProfileImage, TitleContainer2, TitleContainer3, Button } from "./celebrity-section-styles";
 import { CardsWorks } from "../cardWorks";
+import { Footer } from "../footer";
 
 const apiKey = import.meta.env.VITE_API_KEY;
 const apiPerson = import.meta.env.VITE_API_PERSON;
@@ -96,6 +97,7 @@ export function CelebritySection() {
         {displayedWorks.length < works.length && (
           <Button onClick={handleLoadMore}>Ver mais</Button>
         )}
+        <Footer />
       </Works>
       <ContainerOthers>
         <ProfileImage>

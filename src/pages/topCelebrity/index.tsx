@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Header } from "../../components/header";
 import { Container, MoviesContainer, Title } from "./top-celebrity-styles";
 import { SmallCardTopCelebrity } from "../../components/smallCardTopCelebrity";
+import { Footer } from "../../components/footer";
 
 interface Celebrity {
   id: number;
@@ -47,6 +48,7 @@ export function TopCelebrity() {
           />
         ))}
       </MoviesContainer>
+      <Footer />
     </Container>
   );
 }

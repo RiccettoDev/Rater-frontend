@@ -5,6 +5,7 @@ import { News } from '../../components/news';
 import { MoviesWatched } from '../../components/moviesWatched';
 import { Recommended } from '../../components/recommended';
 import { Celebrities } from '../../components/celebrities';
+import { Footer } from '../../components/footer';
 
 export function Home() {
   return (
@@ -15,6 +16,7 @@ export function Home() {
       <MoviesWatched />
       <Recommended />
       <Celebrities />
+      <Footer />
     </Container>
   );
 }

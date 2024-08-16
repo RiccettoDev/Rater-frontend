@@ -34,6 +34,7 @@ import { Header } from "../../components/header";
 import { FaPlay, FaRegStar, FaStar } from "react-icons/fa";
 import { ActorEmphasis } from "../../components/actorEmphasis";
 import { SmallCardMovie } from "../../components/smallCardMovie";
+import { Footer } from "../../components/footer";
 
 const apiKey = import.meta.env.VITE_API_KEY;
 const apiMovie = import.meta.env.VITE_API_MOVIE;
@@ -257,6 +258,7 @@ export function MovieDetail() {
           </ModalContent>
         </ModalContainer>
       )}
+      <Footer />
     </Container>
   );
 }

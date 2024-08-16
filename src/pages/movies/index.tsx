@@ -3,6 +3,7 @@ import { Header } from "../../components/header";
 import { Container, MoviesContainer, MovieCard, Overlay, Info } from "./movies-styles";
 import { FaStar } from "react-icons/fa";
 import { Link, useLocation } from "react-router-dom";
+import { Footer } from "../../components/footer";
 
 interface Movie {
   id: number;
@@ -82,6 +83,7 @@ export function Movies() {
           </Link>
         ))}
       </MoviesContainer>
+      <Footer />
     </Container>
   );
 }

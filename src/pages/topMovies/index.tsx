@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Header } from "../../components/header";
 import { Container, MoviesContainer, Title } from "./top-movies-styles";
 import { SmallCardTopMovie } from "../../components/smallCardTopMovie";
+import { Footer } from "../../components/footer";
 
 interface Movie {
   id: number;
@@ -53,6 +54,7 @@ export function TopMovies() {
           />
         ))}
       </MoviesContainer>
+      <Footer />
     </Container>
   );
 }
