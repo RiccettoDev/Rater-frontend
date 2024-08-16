@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { MovieEmphasis } from "../emphasisMovie";
+import { MovieEmphasis } from '../emphasisMovie';
 import { OtherMovies } from "../otherMovies";
 
 import { Container, ContainerOthers, TitleContainer } from "./movie-section-styles";

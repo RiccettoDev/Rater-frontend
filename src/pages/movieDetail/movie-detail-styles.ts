@@ -12,7 +12,7 @@ export const Container = styled.div`
 
 export const Profile = styled.div`
   display: flex;
-  width: 96%;
+  width: 92%;
   height: 600px;
   margin-left: 24px;
   margin-right: 24px;
