@@ -66,7 +66,7 @@ export function Header() {
           </SearchButton>
           <Search
             type="text"
-            placeholder="Pesquisar..."
+            placeholder="Pesquisar filmes..."
             value={query}
             onChange={(e) => setQuery(e.target.value)}
           />

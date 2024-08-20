@@ -23,3 +23,49 @@ export const Title = styled.h1`
   margin: 0;
   margin-left: 16em;
 `;
+
+export const SearchContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+`;
+
+export const SearchInput = styled.input`
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 15px;
+  background-color: #1E1E1E;
+  color: #FFFFFF;
+  margin-top: 24px;
+  margin-bottom: 24px;
+
+  ::placeholder {
+    color: #FFFFFF;
+  }
+`;
+
+export const SearchButton = styled.button`
+  left: 16px;
+  width: 128px;
+  height: 40px;
+  border-radius: 12px;
+  margin-right: 48px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 55px, 12px, 55px, 12px;
+  gap: 8px;
+  background-color: #232323;
+  color: #EEEEEE;
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+`;
