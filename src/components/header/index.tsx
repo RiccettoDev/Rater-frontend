@@ -9,6 +9,7 @@ import {
   SearchButton,
   Search,
   LoginButton,
+  Img,
 } from './header-styles';
 import { ModalRegister } from '../modalRegister';
 import { LoginModal } from '../modalLogin'; // Importar o componente LoginModal
@@ -57,7 +58,7 @@ export function Header() {
   return (
     <HeaderContainer>
       <Link to={`/`}>
-        <img src={logo} alt="logo" />
+        <Img src={logo} alt="logo" />
       </Link>
       <SearchContainer>
         <SectionContainer>

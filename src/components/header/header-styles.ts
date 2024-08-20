@@ -8,7 +8,24 @@ export const HeaderContainer = styled.div`
   padding: 24px;
   height: 96px;
   color: #FFFFFF;
+
+  @media (max-width: 768px) {
+    height: 120px;
+    flex-direction: column;
+    padding: 8px;
+    gap: 70px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    position: relative;
+  }
 `;
+
+export const Img = styled.img`
+  @media (max-width: 768px) {
+    position: absolute;
+    left: 2em;
+  }
+`
 
 export const SearchContainer = styled.div`
   display: flex;
@@ -73,5 +90,10 @@ export const LoginButton = styled.button`
     background: rgba(0, 0, 0, 0.3);
     transform: scale(1.05);
     cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    position: absolute;
+    margin-left: 17em;
   }
 `;

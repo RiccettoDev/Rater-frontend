@@ -10,6 +10,11 @@ export const ModalContainer = styled.div`
   background-color: #232323;
   z-index: 5000;
   box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+
+  @media (max-width: 768px) {
+    top: 2em;
+    left: 11em;
+  }
 `;
 
 export const SubContainer = styled.div`
