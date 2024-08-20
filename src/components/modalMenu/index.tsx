@@ -19,10 +19,13 @@ export function ModalMenu({ isOpen, closeModalMenu }: MenuModalProps) {
       <CloseButton onClick={closeModalMenu}>X</CloseButton>
       <SubContainer>
         <Link to={'/topmovies'}>
-          <Title>Filmes</Title>
+          <Title>| Filmes</Title>
+        </Link>
+        <Link to={'/topseries'}>
+          <Title>| Séries</Title>
         </Link>
         <Link to={'/topcelebrity'}>
-          <Title>Celebridades</Title>
+          <Title>| Celebridades</Title>
         </Link>
       </SubContainer>
     </ModalContainer>

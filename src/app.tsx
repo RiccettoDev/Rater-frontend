@@ -5,6 +5,7 @@ import { MovieDetail } from "./pages/movieDetail";
 import { Movies } from "./pages/movies";
 import { TopMovies } from "./pages/topMovies";
 import { TopCelebrity } from "./pages/topCelebrity";
+import { TopSeries } from "./pages/topSeries";
 
 export function App() {
   return (
@@ -15,6 +16,7 @@ export function App() {
         <Route path="/movie/:id" element={<MovieDetail />} />
         <Route path="/movies" element={<Movies />} />
         <Route path="/topmovies" element={<TopMovies />} />
+        <Route path="/topseries" element={<TopSeries />} />
         <Route path="/topcelebrity" element={<TopCelebrity />} />
       </Routes>
     </Router>
