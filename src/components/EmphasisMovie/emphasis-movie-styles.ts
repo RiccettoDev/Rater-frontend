@@ -8,6 +8,12 @@ export const CardMovie = styled.div`
   overflow: hidden; /* Garante que o conteúdo não ultrapasse o card */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+  @media (max-width: 768px) {
+    width: 85%;
+    height: 500px;
+    position: absolute;
+  }
 `;
 
 export const CardImage = styled.img`
@@ -48,17 +54,26 @@ export const CardInfo = styled.p`
   gap: 12px;
   margin: 0;
   padding-bottom: 20px;
+
 `;
 
 export const CardSubInfo = styled.p`
   margin: 0;
   font-size: 0.9rem;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const CardOverview = styled.p`
   margin: 0;
   font-size: 0.9rem;
   padding-bottom: 20px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const CardTrailer = styled.button`
@@ -77,5 +92,9 @@ export const CardTrailer = styled.button`
     background: rgba(0, 0, 0, 0.3);
     transform: scale(1.05);
     cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    display: none;
   }
 `

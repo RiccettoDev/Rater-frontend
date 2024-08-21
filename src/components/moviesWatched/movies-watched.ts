@@ -6,6 +6,10 @@ export const Container = styled.div`
   padding-left: 24px;
   padding-bottom: 24px;
   color: #FFFFFF;
+
+  @media (max-width: 768px) {
+    margin-top: 1em;
+  }
 `;
 
 export const SubContainer = styled.div`

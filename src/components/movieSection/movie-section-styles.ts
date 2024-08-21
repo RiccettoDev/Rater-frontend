@@ -7,6 +7,12 @@ export const Container = styled.div`
   width: 100%;
   height: 750px;
   color: #FFFFFF;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: 1080px;
+    position: relative;
+  }
 `;
 
 export const ContainerOthers = styled.div`
@@ -15,6 +21,12 @@ export const ContainerOthers = styled.div`
   width: 30%;
   color: #FFFFFF;
   gap: 15px;
+
+  @media (max-width: 768px) {
+    margin-top: 33em;
+    width: 90%;
+    height: 500px;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -23,4 +35,9 @@ export const TitleContainer = styled.div`
   color: #FFFFFF;
   margin-top: -1em;
   margin-bottom: -1em;
+
+  @media (max-width: 768px) {
+    margin-bottom: 1em;
+    margin-top: 1em;
+  }
 `;
