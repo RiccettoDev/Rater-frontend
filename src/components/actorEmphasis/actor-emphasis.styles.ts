@@ -5,12 +5,20 @@ export const ActorContainer = styled.div`
   gap: 10px; /* Espaço entre os cards */
   overflow-x: auto; /* Permite rolar horizontalmente se houver muitos atores */
   padding: 10px 0; /* Espaçamento interno */
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+  }
 `;
 
 export const CardActor = styled.div`
   position: relative;
   width: 150px;
   margin: 0; /* Remove a margem padrão para alinhamento em linha */
+
+  @media (max-width: 768px) {
+    width: 165px;
+  }
 `;
 
 export const CardImage = styled.img`

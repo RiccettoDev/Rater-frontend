@@ -8,6 +8,10 @@ export const Container = styled.div`
   background-color: #121212;
   color: #FFFFFF;
   overflow-x: hidden;
+
+  @media (max-width: 768px) {
+    position: relative;
+  }
 `;
 
 export const Profile = styled.div`
@@ -20,6 +24,13 @@ export const Profile = styled.div`
   border-radius: 10px;
   padding: 24px;
   position: relative;
+
+  @media (max-width: 768px) {
+    padding: 0;
+    width: 90%;
+    margin-top: 10em;
+    position: absolute;
+  }
 `;
 
 export const CardImage = styled.img`
@@ -59,6 +70,10 @@ export const CardTrailer = styled.button`
     transform: scale(1.05);
     cursor: pointer;
   }
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `
 
 export const Vote = styled.button`
@@ -81,6 +96,10 @@ export const Vote = styled.button`
     transform: scale(1.05);
     cursor: pointer;
   }
+
+  @media (max-width: 768px) {
+    width: 150px;
+  }
 `
 export const Info = styled.div`
   display: flex;
@@ -89,6 +108,12 @@ export const Info = styled.div`
   margin-left: 24px;
   margin-right: 24px;
   border-radius: 10px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    position: absolute;
+    margin-top: 48em;
+  }
 `;
 
 export const Detail = styled.div`
@@ -96,6 +121,10 @@ export const Detail = styled.div`
   flex-direction: column;
   width: 65%;
   padding-top: 30px;
+  
+  @media (max-width: 768px) {
+    width: 93%;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -106,7 +135,11 @@ export const TitleContainer = styled.div`
   color: #FFFFFF;
   width: 100%;
   margin-bottom: -0.2em;
-  gap: 20px
+  gap: 20px;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
 `;
 
 export const TitleContainer2 = styled.h4`
@@ -128,6 +161,10 @@ export const Detail2 = styled.div`
   padding: 5px;
   gap: 5px;
   margin-top: 0.6em;
+
+  @media (max-width: 768px) {
+    width: 93%;
+  }
 `;
 
 export const Detail3 = styled.div`
@@ -178,6 +215,11 @@ export const ContainerCelebrity = styled.div`
   padding-right: 24px;
   padding-bottom: 24px;
   color: #FFFFFF;
+
+  @media (max-width: 768px) {
+    position: absolute;
+    margin-top: 85em;
+  }
 `;
 
 export const SubContainerCelebrity = styled.div`
@@ -187,6 +229,11 @@ export const SubContainerCelebrity = styled.div`
   height: 250px;
   color: #FFFFFF;
   gap: 15px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 //---------- ContainerRecommended
@@ -198,6 +245,12 @@ export const ContainerRecommended = styled.div`
   padding-right: 24px;
   padding-bottom: 24px;
   color: #FFFFFF;
+
+  @media (max-width: 768px) {
+    position: absolute;
+    margin-top: 105em;
+    width: 90%;
+  }
 `;
 
 export const SubContainer = styled.div`
@@ -207,6 +260,11 @@ export const SubContainer = styled.div`
   height: 250px;
   color: #FFFFFF;
   gap: 15px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    height: 100%;
+  }
 `;
 
 //------------ Modal
@@ -304,4 +362,14 @@ export const Message = styled.p`
   font-weight: bold;
   color: #FFFF00;
   margin-bottom: 1em;
+`;
+
+//-------------------- Gamb ------------
+
+export const DivFooter = styled.p`
+  @media (max-width: 768px) {
+    position: absolute;
+    margin-top: 177em;
+    margin-left: 6em;
+  }
 `;

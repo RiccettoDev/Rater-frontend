@@ -8,6 +8,10 @@ export const CardMovie = styled.div`
   overflow: hidden; /* Garante que o conteúdo não ultrapasse o card */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const CardImage = styled.img`

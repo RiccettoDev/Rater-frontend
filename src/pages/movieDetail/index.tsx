@@ -28,7 +28,8 @@ import {
   TitleModal,
   Message,
   CloseButton,
-  ContainerStars
+  ContainerStars,
+  DivFooter
 } from "./movie-detail-styles";
 import { Header } from "../../components/header";
 import { FaPlay, FaRegStar, FaStar } from "react-icons/fa";
@@ -263,7 +264,9 @@ export function MovieDetail() {
           </ModalContent>
         </ModalContainer>
       )}
-      <Footer />
+      <DivFooter>
+        <Footer />
+      </DivFooter>
     </Container>
   );
 }
