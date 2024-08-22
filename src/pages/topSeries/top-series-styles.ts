@@ -8,6 +8,10 @@ export const Container = styled.div`
   background-color: #121212;
   color: #FFFFFF;
   overflow-x: hidden;
+
+  @media (max-width: 768px) {
+    position: relative;
+  }
 `;
 
 export const MoviesContainer = styled.div`
@@ -22,6 +26,13 @@ export const Title = styled.h1`
   color: #FFFFFF;
   margin: 0;
   margin-left: 16em;
+
+  @media (max-width: 768px) {
+    position: absolute;
+    width: 100%;
+    right: -2.5em;
+    top: 5.5em;
+  }
 `;
 
 export const SearchContainer = styled.div`
@@ -29,6 +40,10 @@ export const SearchContainer = styled.div`
   flex-direction: column;
   align-items: center;
   margin: 20px 0;
+
+  @media (max-width: 768px) {
+    margin-top: 3em;
+  }
 `;
 
 export const SearchInput = styled.input`
@@ -44,6 +59,10 @@ export const SearchInput = styled.input`
 
   ::placeholder {
     color: #FFFFFF;
+  }
+
+  @media (max-width: 768px) {
+    width: 70%;
   }
 `;
 
@@ -67,5 +86,9 @@ export const SearchButton = styled.button`
     background: rgba(0, 0, 0, 0.3);
     transform: scale(1.05);
     cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    margin-left: 4em;
   }
 `;
