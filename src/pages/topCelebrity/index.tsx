@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Header } from "../../components/header";
-import { Container, MoviesContainer, Title } from "./top-celebrity-styles";
+import { Container, DivFooter, MoviesContainer, Title } from "./top-celebrity-styles";
 import { SmallCardTopCelebrity } from "../../components/smallCardTopCelebrity";
 import { Footer } from "../../components/footer";
 
@@ -48,7 +48,9 @@ export function TopCelebrity() {
           />
         ))}
       </MoviesContainer>
-      <Footer />
+      <DivFooter>
+        <Footer />
+      </DivFooter>
     </Container>
   );
 }
