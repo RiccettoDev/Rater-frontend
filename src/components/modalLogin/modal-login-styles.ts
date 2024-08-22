@@ -11,6 +11,11 @@ export const ModalContainer = styled.div`
   align-items: center;
   justify-content: center;
   z-index: 1000;
+
+  @media (max-width: 768px) {
+    width: 95%;
+    margin-left: 1em;
+  }
 `;
 
 export const ModalContent = styled.div`
@@ -47,6 +52,10 @@ export const CloseButton = styled.button`
     background: rgba(0, 0, 0, 0.3);
     transform: scale(1.05);
     cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    margin-right: -1em;
   }
 `
 

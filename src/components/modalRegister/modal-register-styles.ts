@@ -27,6 +27,10 @@ export const ModalContent = styled.div`
   gap: 1em;
   color: #FFFFFF;
   position: relative;
+
+  @media (max-width: 768px) {
+    width: 70%;
+  }
 `;
 
 export const CloseButton = styled.button`
@@ -48,11 +52,22 @@ export const CloseButton = styled.button`
     transform: scale(1.05);
     cursor: pointer;
   }
+
+  @media (max-width: 768px) {
+    position: absolute;
+    margin-top: 7em;
+  }
 `
 
 export const Title = styled.h1`
   color: #FFFFFF;
   margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 24px;
+    margin-bottom: 1em;
+    margin-top: 2em;
+  }
 `
 
 export const SubTitle = styled.h4`
@@ -60,6 +75,21 @@ export const SubTitle = styled.h4`
   font-weight: lighter;
   margin: 0;
   margin-bottom: 2em;
+  
+  @media (max-width: 768px) {
+    display: none;
+  }
+`
+
+export const SubTitleBotton = styled.h4`
+  color: #858585;
+  font-weight: lighter;
+  margin: 0;
+  margin-bottom: 2em;
+
+  @media (max-width: 768px) {
+    margin-top: -1.8em;
+  }
 `
 
 export const FormContainer = styled.div`
@@ -73,6 +103,10 @@ export const Label = styled.label`
   color: #FFFFFF;
   display: flex;
   padding: 10px;
+
+  @media (max-width: 768px) {
+    margin-top: 0%.5;
+  }
 `
 
 export const Input = styled.input`
@@ -113,5 +147,9 @@ export const ConfirmeButton = styled.button`
     background: rgba(0, 0, 0, 0.3);
     transform: scale(1.05);
     cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 1em;
   }
 `;

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ModalContainer, ModalContent, CloseButton, Title, SubTitle, Label, FormContainer, Input, ConfirmeButton } from "./modal-register-styles";
+import { ModalContainer, ModalContent, CloseButton, Title, SubTitle, Label, FormContainer, Input, ConfirmeButton, SubTitleBotton } from "./modal-register-styles";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 
 interface ModalProps {
@@ -72,7 +72,7 @@ export function ModalRegister({ closeModalRegister }: ModalProps) {
           </span>
         </div>
         <ConfirmeButton>Cadastrar</ConfirmeButton>
-        <SubTitle>Já tem uma conta? <button onClick={closeModalRegister} style={{ border: 'none', background: 'none', cursor: 'pointer' }}><span style={{ color: '#FFFFFF' }}>Fazer login</span></button></SubTitle>
+        <SubTitleBotton>Já tem uma conta? <button onClick={closeModalRegister} style={{ border: 'none', background: 'none', cursor: 'pointer' }}><span style={{ color: '#FFFFFF' }}>Fazer login</span></button></SubTitleBotton>
       </ModalContent>
     </ModalContainer>
   );
