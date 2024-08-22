@@ -22,4 +22,9 @@ export const Title = styled.h1`
   color: #FFFFFF;
   margin: 0;
   margin-left: 16em;
+
+  @media (max-width: 768px) {
+    margin-left: 2.5em;
+    padding: 0;
+  }
 `;
