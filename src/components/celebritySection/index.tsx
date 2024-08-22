@@ -81,24 +81,6 @@ export function CelebritySection() {
 
   return (
     <Container>
-      <Works>
-        {displayedWorks.map(work => (
-          <Link to={`/movie/${work.id}`}>
-            <CardsWorks
-              key={work.id}
-              title={work.title}
-              posterPath={work.poster_path}
-              voteAverage={work.vote_average}
-              releaseDate={work.release_date}
-              imageBaseUrl={imageBaseUrl}
-            />
-          </Link>
-        ))}
-        {displayedWorks.length < works.length && (
-          <Button onClick={handleLoadMore}>Ver mais</Button>
-        )}
-        <Footer />
-      </Works>
       <ContainerOthers>
         <ProfileImage>
           {celebrity.profile_path && (
@@ -127,6 +109,24 @@ export function CelebritySection() {
           {celebrity.biography || 'Biografia não disponível'}
         </TitleContainer3>
       </ContainerOthers>
+      <Works>
+        {displayedWorks.map(work => (
+          <Link to={`/movie/${work.id}`}>
+            <CardsWorks
+              key={work.id}
+              title={work.title}
+              posterPath={work.poster_path}
+              voteAverage={work.vote_average}
+              releaseDate={work.release_date}
+              imageBaseUrl={imageBaseUrl}
+            />
+          </Link>
+        ))}
+        {displayedWorks.length < works.length && (
+          <Button onClick={handleLoadMore}>Ver mais</Button>
+        )}
+        <Footer />
+      </Works>
     </Container>
   );
 }

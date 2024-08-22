@@ -7,6 +7,10 @@ export const Container = styled.div`
   width: 100%;
   height: 750px;
   color: #FFFFFF;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
 `;
 
 export const Works = styled.div`
@@ -23,6 +27,10 @@ export const ContainerOthers = styled.div`
   width: 30%;
   color: #FFFFFF;
   gap: 15px;
+
+  @media (max-width: 768px) {
+    width: 90%;
+  }
 `;
 
 export const ProfileImage = styled.div`
