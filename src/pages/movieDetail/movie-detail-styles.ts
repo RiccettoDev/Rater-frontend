@@ -296,6 +296,10 @@ export const ModalContent = styled.div`
   gap: 1em;
   color: #FFFFFF;
   position: relative;
+
+  @media (max-width: 768px) {
+    width: 70%;
+  }
 `;
 
 export const ContainerStars = styled.div`
