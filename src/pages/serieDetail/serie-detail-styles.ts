@@ -17,7 +17,7 @@ export const Container = styled.div`
 export const Profile = styled.div`
   display: flex;
   flex-direction: row;
-  width: 92%;
+  width: 88%;
   height: auto;
   margin-left: 24px;
   margin-right: 24px;
@@ -48,7 +48,7 @@ export const CardImage = styled.img`
 
 export const Info = styled.div`
   display: flex;
-  width: 96%;
+  width: 94%;
   height: auto;
   margin-left: 24px;
   margin-right: 24px;
@@ -82,6 +82,7 @@ export const TitleContainer2 = styled.h4`
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-right: 2em;
 `;
 
 export const TitleContainer3 = styled.h5`
