@@ -16,6 +16,11 @@ export const MoviesContainer = styled.div`
   flex-wrap: wrap;
   gap: 20px;
   padding-left: 24px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding-left: 2.5em;
+  }
 `;
 
 export const MovieCard = styled.div`
@@ -41,6 +46,10 @@ export const MovieCard = styled.div`
     color: black;
     font-weight: bold;
     font-size: 16px;
+  }
+
+  @media (max-width: 768px) {
+    width: 80%;
   }
 `;
 
