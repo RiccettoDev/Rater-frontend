@@ -8,52 +8,48 @@ export const Container = styled.div`
   background-color: #121212;
   color: #FFFFFF;
   overflow-x: hidden;
+
+  @media (max-width: 768px) {
+    position: relative;
+  }
 `;
 
 export const Profile = styled.div`
   display: flex;
+  flex-direction: row;
   width: 92%;
-  height: 600px;
+  height: auto;
   margin-left: 24px;
   margin-right: 24px;
   margin-top: -1em;
   border-radius: 10px;
   padding: 24px;
   position: relative;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding: 0;
+    margin-top: 1em;
+    margin-bottom: 2em;
+  }
 `;
 
 export const CardImage = styled.img`
   width: 30%;
-  height: 100%; /* Ajuste para cobrir o card inteiro */
-  object-fit: cover; /* Garante que a imagem cubra a área sem distorcer */
+  height: 100%;
+  object-fit: cover;
   border-radius: 10px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+  }
 `;
 
-export const Vote = styled.button`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: none;
-  color: #FFFFFF;
-  width: 200px;
-  height: 40px;
-  border-radius: 10px;
-  gap: 10px;
-  background: rgba(0, 0, 0, 0.5); /* Fundo escuro para melhorar a legibilidade */
-  position: absolute;
-  bottom: 2em;
-  right: 2em;
-  
-  &:hover {
-    background: rgba(0, 0, 0, 0.3);
-    transform: scale(1.05);
-    cursor: pointer;
-  }
-`
 export const Info = styled.div`
   display: flex;
   width: 96%;
-  height: 200px;
+  height: auto;
   margin-left: 24px;
   margin-right: 24px;
   border-radius: 10px;
@@ -64,6 +60,10 @@ export const Detail = styled.div`
   flex-direction: column;
   width: 65%;
   padding-top: 30px;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 export const TitleContainer = styled.div`
@@ -74,7 +74,7 @@ export const TitleContainer = styled.div`
   color: #FFFFFF;
   width: 100%;
   margin-bottom: -0.2em;
-  gap: 20px
+  gap: 20px;
 `;
 
 export const TitleContainer2 = styled.h4`
@@ -89,6 +89,51 @@ export const TitleContainer3 = styled.h5`
   margin-bottom: -0.2em;
 `;
 
+export const ContainerCelebrity = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 24px;
+  color: #FFFFFF;
+
+  @media (max-width: 768px) {
+    margin-top: 1em;
+    position: relative;
+  }
+`;
+
+export const SubContainerCelebrity = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  color: #FFFFFF;
+  gap: 15px;
+`;
+
+export const Vote = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: #FFFFFF;
+  width: 200px;
+  height: 40px;
+  border-radius: 10px;
+  gap: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  bottom: 2em;
+  right: 2em;
+  
+  &:hover {
+    background: rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+`;
+
 export const Detail2 = styled.div`
   color: #FFFFFF;
   width: 40%;
@@ -96,6 +141,10 @@ export const Detail2 = styled.div`
   padding: 5px;
   gap: 5px;
   margin-top: 0.6em;
+
+  @media (max-width: 768px) {
+    margin-bottom: 2em;
+  }
 `;
 
 export const Detail3 = styled.div`
@@ -135,24 +184,4 @@ export const TitleContainer4 = styled.div`
 export const TitleContainer5 = styled.div`
   color: #c6c6c6;
   margin-bottom: 0.8em;
-`;
-
-//----------- celebrity --------------
-
-export const ContainerCelebrity = styled.div`
-  display: flex;
-  flex-direction: column;
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-bottom: 24px;
-  color: #FFFFFF;
-`;
-
-export const SubContainerCelebrity = styled.div`
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: 250px;
-  color: #FFFFFF;
-  gap: 15px;
 `;
