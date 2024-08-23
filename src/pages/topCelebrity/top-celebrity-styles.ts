@@ -30,7 +30,7 @@ export const MoviesContainer = styled.div`
 export const Title = styled.h1`
   color: #FFFFFF;
   margin: 0;
-  margin-left: 16em;
+  margin-left: 14.5em;
 
   @media (max-width: 768px) {
     position: absolute;
